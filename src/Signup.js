@@ -22,7 +22,7 @@ function Signup() {
     setAuthError("");
     setSuccess(false);
 
-    const response = await fetch("https://todobackend-3mtw.onrender.com/register", {
+    const response = await fetch("https://todobackend-nhf4.onrender.com/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
