@@ -15,7 +15,7 @@ function App() {
   const [filterPriority, setFilterPriority] = useState("all");
 
   const fetchTasks = async (token) => {
-    const response = await fetch("https://todobackend-3mtw.onrender.com/task", {
+    const response = await fetch("https://todobackend-nhf4.onrender.com/task", {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.json();
@@ -35,7 +35,7 @@ function App() {
   };
 
   const addTask = async (text) => {
-    const response = await fetch("https://todobackend-3mtw.onrender.com/task", {
+    const response = await fetch("https://todobackend-nhf4.onrender.com/task", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ function App() {
   };
 
   const deleteTask = async (id) => {
-    await fetch(`https://todobackend-3mtw.onrender.com/task/${id}`, {
+    await fetch(`https://todobackend-nhf4.onrender.com/task/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -57,7 +57,7 @@ function App() {
 
   const updateTaskStatus = async (id, currentStatus) => {
     const newStatus = currentStatus === "pending" ? "completed" : "pending";
-    const response = await fetch(`https://todobackend-3mtw.onrender.com/task/${id}/status`, {
+    const response = await fetch(`https://todobackend-nhf4.onrender.com/task/${id}/status`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function App() {
   };
 
   const updateTaskPriority = async (id, newPriority) => {
-    const response = await fetch(`https://todobackend-3mtw.onrender.com/task/${id}/priority`, {
+    const response = await fetch(`https://todobackend-nhf4.onrender.com/task/${id}/priority`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
